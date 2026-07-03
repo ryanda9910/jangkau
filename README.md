@@ -16,7 +16,7 @@ Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nul
 - 💱 "Kurs dolar sekarang?" / 📈 "BBCA berapa?" → tidak tahu sumber gratis yang legal
 - 📊 "Cari data inflasi resmi" → tidak tahu data.go.id dan BPS WebAPI itu ada
 
-`jangkau` membereskan semuanya: **18 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
+`jangkau` membereskan semuanya: **19 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
 
 ## Instal (suruh agent kamu yang pasang)
 
@@ -54,6 +54,7 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 | ✈️ Pesawat | `jangkau pesawat` | Pesawat live di wilayah udara Indonesia (OpenSky) |
 | 🤲 Doa | `jangkau doa` / `jangkau doa --husna` | Doa harian & Asmaul Husna (myQuran) |
 | 📚 Wiki | `jangkau wiki soekarno` | Ringkasan Wikipedia Bahasa Indonesia |
+| 🌊 Maritim | `jangkau maritim "selat sunda"` | Kondisi laut / gelombang untuk perairan Indonesia (Open-Meteo Marine) |
 | 📊 Dataset | `jangkau data inflasi` | Portal Satu Data (data.go.id) |
 | 📉 Statistik | `jangkau bps inflasi` | BPS WebAPI (key gratis, 1 menit daftar) |
 | 📱 Sosial (1 URL) | `jangkau sosial <url>` | oEmbed resmi: TikTok + YouTube (tanpa key), IG + FB (perlu Meta app token) |

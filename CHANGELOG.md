@@ -2,6 +2,12 @@
 
 Semua perubahan penting jangkau. Format longgar ala [Keep a Changelog], tanggal WIB.
 
+## [0.2.1] - 2026-07-04
+
+### Ditambahkan
+- **`maritim`**: kondisi laut untuk perairan/kota pesisir Indonesia (tinggi & arah gelombang, periode, swell, suhu muka laut) via Open-Meteo Marine — data vital untuk nelayan & pelayaran. Perairan populer terpetakan (Selat Sunda, Natuna, Laut Jawa, Bali, dll) + fallback kota pesisir.
+- Metadata package.json lengkap (repository/bugs/homepage/files) — siap `npm publish`.
+
 ## [0.2.0] - 2026-07-04
 
 Ekspansi besar: 9 → 18 kanal, plus loop harness self-improving.
