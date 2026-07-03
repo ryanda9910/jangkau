@@ -28,6 +28,8 @@ check "ihsg"     '"indeks"'      $J ihsg
 check "sholat"   '"maghrib"'     $J sholat jakarta
 check "quran-s"  '"jumlah_ayat"' $J quran 1
 check "quran-a"  '"terjemahan"'  $J quran 2 255
+check "hijriah"  '"hijriah"'     $J hijriah
+check "pesawat"  '"total_di_wilayah"' $J pesawat --limit 3
 check "cuaca"    '"lokasi"'     $J cuaca jasinga bogor
 check "bps"      'webapi.bps.go.id\|"indikator"' $J bps inflasi
 check "sosial-tt" '"platform"' $J sosial "https://www.tiktok.com/@scout2015/video/6718335390845095173"

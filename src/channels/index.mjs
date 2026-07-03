@@ -12,5 +12,7 @@ import * as udara from "./udara.mjs";
 import * as ihsg from "./ihsg.mjs";
 import * as sholat from "./sholat.mjs";
 import * as quran from "./quran.mjs";
+import * as hijriah from "./hijriah.mjs";
+import * as pesawat from "./pesawat.mjs";
 
-export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, data, bps, sosial, udara };
+export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, hijriah, pesawat, data, bps, sosial, udara };
