@@ -19,6 +19,7 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 | Kode pos + koordinat | `jangkau kodepos <nama tempat>` |
 | Kurs rupiah | `jangkau kurs` (USD→IDR) atau `jangkau kurs EUR IDR` |
 | Saham IDX | `jangkau saham BBCA` (data, bukan rekomendasi) |
+| Indeks bursa | `jangkau ihsg` (IHSG) / `jangkau ihsg lq45` (data, bukan rekomendasi) |
 | Dataset pemerintah | `jangkau data <kata kunci>` |
 | Statistik BPS | `jangkau bps <kata kunci>` (sekali saja: daftar key gratis di webapi.bps.go.id lalu `jangkau bps --key <KEY>`) |
 | Baca 1 post sosial | `jangkau sosial <url>` (oEmbed resmi; TikTok/YouTube tanpa key, IG/FB perlu Meta token) |

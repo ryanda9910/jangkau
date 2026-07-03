@@ -9,5 +9,6 @@ import * as data from "./data.mjs";
 import * as bps from "./bps.mjs";
 import * as sosial from "./sosial.mjs";
 import * as udara from "./udara.mjs";
+import * as ihsg from "./ihsg.mjs";
 
-export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, data, bps, sosial, udara };
+export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, data, bps, sosial, udara };

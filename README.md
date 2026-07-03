@@ -13,7 +13,7 @@ Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nul
 - 💱 "Kurs dolar sekarang?" / 📈 "BBCA berapa?" → tidak tahu sumber gratis yang legal
 - 📊 "Cari data inflasi resmi" → tidak tahu data.go.id dan BPS WebAPI itu ada
 
-`jangkau` membereskan semuanya: **11 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
+`jangkau` membereskan semuanya: **12 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
 
 ## Instal (suruh agent kamu yang pasang)
 
@@ -44,6 +44,7 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 | 📮 Kode pos | `jangkau kodepos jasinga` | + koordinat |
 | 💱 Kurs | `jangkau kurs EUR IDR` | ECB via Frankfurter |
 | 📈 Saham IDX | `jangkau saham BBCA` | Yahoo Finance (data, bukan rekomendasi) |
+| 📊 IHSG / LQ45 | `jangkau ihsg` / `jangkau ihsg lq45` | Indeks bursa Indonesia (data, bukan rekomendasi) |
 | 📊 Dataset | `jangkau data inflasi` | Portal Satu Data (data.go.id) |
 | 📉 Statistik | `jangkau bps inflasi` | BPS WebAPI (key gratis, 1 menit daftar) |
 | 📱 Sosial (1 URL) | `jangkau sosial <url>` | oEmbed resmi: TikTok + YouTube (tanpa key), IG + FB (perlu Meta app token) |
@@ -77,6 +78,7 @@ Contoh nyata: Yahoo Finance memblokir IP datacenter tapi lolos di IP rumahan —
 
 ## Roadmap
 
+- `pangan` (harga pangan Badan Pangan RI) — API-nya (`api-panelhargav2.badanpangan.go.id`) menolak koneksi dari luar (bukan cuma WAF); ditahan sampai ada jalur resmi.
 - `bmkg iklim` (indeks UV), pasang surut, siklon tropis — kalau ada endpoint publik JSON.
 - Kanal usulan? Buka issue — kriteria: sumber resmi, legal, tanpa login, tanpa bypass WAF.
 

@@ -24,6 +24,7 @@ check "wilayah"  '"kode"'       $J wilayah bogor
 check "kodepos"  '"kodepos"'    $J kodepos menteng
 check "kurs"     '"kurs"'       $J kurs
 check "saham"    '"harga"'      $J saham BBCA
+check "ihsg"     '"indeks"'      $J ihsg
 check "cuaca"    '"lokasi"'     $J cuaca jasinga bogor
 check "bps"      'webapi.bps.go.id\|"indikator"' $J bps inflasi
 check "sosial-tt" '"platform"' $J sosial "https://www.tiktok.com/@scout2015/video/6718335390845095173"
