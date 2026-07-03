@@ -1,6 +1,6 @@
 {
   "name": "jangkau",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Beri agent AI kamu akses data publik Indonesia — BMKG, berita, wilayah, kurs, saham IDX — dengan routing multi-backend yang belajar sendiri.",
   "type": "module",
   "bin": { "jangkau": "bin/jangkau.js" },
