@@ -2,6 +2,8 @@
 
 **Beri agent AI kamu akses data publik Indonesia — satu perintah.**
 
+![demo jangkau: gempa, cuaca, saham, doctor, learn — live](assets/demo.gif)
+
 Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nulis kode, tapi buta soal Indonesia:
 
 - 🌋 "Barusan gempa di mana?" → tidak tahu cara baca BMKG
