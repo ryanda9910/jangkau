@@ -22,6 +22,11 @@ Enter
 Sleep 5s
 Type "clear"
 Enter
+Type "jangkau sholat jakarta"
+Enter
+Sleep 3.5s
+Type "clear"
+Enter
 Type "jangkau udara jakarta"
 Enter
 Sleep 3.5s
