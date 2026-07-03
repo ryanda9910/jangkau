@@ -1,0 +1,24 @@
+name: Health
+
+# Live channel health, on a schedule — NOT a merge gate. This is the deployed
+# side of jangkau's self-improving loop: `jangkau tune` hits every real endpoint,
+# grades regressions (ignoring transient rate-limits), and fails only if a proven
+# channel has hard-broken. A red run pings maintainers to add/reorder a backend —
+# exactly the maintenance promise ("platform breaks, we fix it") a data layer needs.
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 05:00 WIB daily
+  workflow_dispatch: {}
+
+jobs:
+  tune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Live doctor (informational)
+        run: node bin/jangkau.js doctor || true
+      - name: Self-improving tune loop (fails on a real regression)
+        run: node bin/jangkau.js tune

@@ -1,5 +1,8 @@
 # 🇮🇩 jangkau
 
+[![CI](https://github.com/ryanda9910/jangkau/actions/workflows/ci.yml/badge.svg)](https://github.com/ryanda9910/jangkau/actions/workflows/ci.yml)
+[![Health](https://github.com/ryanda9910/jangkau/actions/workflows/health.yml/badge.svg)](https://github.com/ryanda9910/jangkau/actions/workflows/health.yml)
+
 **Beri agent AI kamu akses data publik Indonesia — satu perintah.**
 
 ![demo jangkau: gempa, cuaca, saham, doctor, learn — live](assets/demo.gif)
