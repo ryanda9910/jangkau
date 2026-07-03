@@ -28,6 +28,8 @@ check "cuaca"    '"lokasi"'     $J cuaca jasinga bogor
 check "bps"      'webapi.bps.go.id\|"indikator"' $J bps inflasi
 check "sosial-tt" '"platform"' $J sosial "https://www.tiktok.com/@scout2015/video/6718335390845095173"
 check "sosial-yt" '"platform"' $J sosial "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+check "udara"    '"aqi"'        $J udara jakarta
+check "tsunami"  '"potensi"\|"tsunami"' $J gempa --tsunami
 check "doctor"   '[1-9][0-9]*/[0-9]* kanal hidup' $J doctor
 check "learn"    'Refleksi\|belum ada trajektori' $J learn
 check "help"     "Kanal"        $J help

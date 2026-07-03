@@ -11,7 +11,8 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 
 | Kebutuhan | Perintah |
 |---|---|
-| Gempa terbaru | `jangkau gempa` (terkini), `jangkau gempa --m5` (M5+), `jangkau gempa --dirasakan` |
+| Gempa terbaru | `jangkau gempa` (terkini), `--m5` (M5+), `--dirasakan`, `--tsunami` (hanya yg berpotensi tsunami) |
+| Kualitas udara | `jangkau udara <kota>` (AQI + PM2.5/PM10; Open-Meteo tanpa key, WAQI opsional via `--waqi <token>`) |
 | Cuaca desa/kecamatan | `jangkau cuaca <desa/kec> [kabupaten]` — contoh `jangkau cuaca jasinga bogor` |
 | Berita nasional | `jangkau berita` atau `jangkau berita <kata kunci> --limit 5` |
 | Kode wilayah BPS | `jangkau wilayah <nama>` |

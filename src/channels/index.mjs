@@ -8,5 +8,6 @@ import * as saham from "./saham.mjs";
 import * as data from "./data.mjs";
 import * as bps from "./bps.mjs";
 import * as sosial from "./sosial.mjs";
+import * as udara from "./udara.mjs";
 
-export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, data, bps, sosial };
+export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, data, bps, sosial, udara };

@@ -13,7 +13,7 @@ Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nul
 - 💱 "Kurs dolar sekarang?" / 📈 "BBCA berapa?" → tidak tahu sumber gratis yang legal
 - 📊 "Cari data inflasi resmi" → tidak tahu data.go.id dan BPS WebAPI itu ada
 
-`jangkau` membereskan semuanya: **10 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
+`jangkau` membereskan semuanya: **11 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
 
 ## Instal (suruh agent kamu yang pasang)
 
@@ -36,7 +36,8 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 
 | Kanal | Perintah | Sumber |
 |---|---|---|
-| 🌋 Gempa | `jangkau gempa` / `--m5` / `--dirasakan` | BMKG (open JSON) |
+| 🌋 Gempa | `jangkau gempa` / `--m5` / `--dirasakan` / `--tsunami` | BMKG (open JSON) |
+| 💨 Kualitas udara | `jangkau udara jakarta` | Open-Meteo (tanpa key); WAQI stasiun darat opsional |
 | ⛅ Cuaca | `jangkau cuaca jasinga bogor` | BMKG (level desa, kode diresolve otomatis) |
 | 📰 Berita | `jangkau berita [kata kunci]` | RSS resmi Antara + CNN Indonesia + Tempo |
 | 🗺️ Wilayah | `jangkau wilayah bogor` | Kode BPS (provinsi→desa) |
