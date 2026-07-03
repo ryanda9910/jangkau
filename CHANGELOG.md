@@ -2,11 +2,16 @@
 
 Semua perubahan penting jangkau. Format longgar ala [Keep a Changelog], tanggal WIB.
 
-## [0.2.1] - 2026-07-04
+## [0.2.2] - 2026-07-04
 
 ### Ditambahkan
 - **`maritim`**: kondisi laut untuk perairan/kota pesisir Indonesia (tinggi & arah gelombang, periode, swell, suhu muka laut) via Open-Meteo Marine — data vital untuk nelayan & pelayaran. Perairan populer terpetakan (Selat Sunda, Natuna, Laut Jawa, Bali, dll) + fallback kota pesisir.
+- **`musik`**: top chart Indonesia (lagu/album/podcast) via Apple Music RSS resmi, tanpa key.
 - Metadata package.json lengkap (repository/bugs/homepage/files) — siap `npm publish`.
+
+### Ditahan (diprobe, tidak layak tanpa melanggar prinsip)
+- **Harga komoditas / produksi pangan** (pertanian/perkebunan/perikanan): BI PIHPS, Kemendag SP2KP, Badan Pangan semua di balik WAF/geo-block. Sebagian tercakup lewat `bps` + `data`.
+- **Top content creator (YouTuber/influencer ranking)**: tidak ada sumber resmi; hanya bisa via scraping SocialBlade/platform = melanggar ToS + risiko ban. Di luar prinsip jangkau (legal, tanpa scraping/WAF-bypass). Creator musik & podcast tercakup lewat `musik`.
 
 ## [0.2.0] - 2026-07-04
 

@@ -33,6 +33,7 @@ check "pesawat"  '"total_di_wilayah"' $J pesawat --limit 3
 check "doa"      '"arab"'        $J doa
 check "wiki"     '"ringkasan"'   $J wiki soekarno
 check "maritim"  '"tinggi_gelombang"' $J maritim "selat sunda"
+check "musik"    '"peringkat"'   $J musik --limit 3
 check "gempa-live" '"magnitudo"' $J gempa --live
 check "cuaca"    '"lokasi"'     $J cuaca jasinga bogor
 check "bps"      'webapi.bps.go.id\|"indikator"' $J bps inflasi

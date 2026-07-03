@@ -17,5 +17,6 @@ import * as pesawat from "./pesawat.mjs";
 import * as doa from "./doa.mjs";
 import * as wiki from "./wiki.mjs";
 import * as maritim from "./maritim.mjs";
+import * as musik from "./musik.mjs";
 
-export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, hijriah, pesawat, doa, wiki, maritim, data, bps, sosial, udara };
+export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, hijriah, pesawat, doa, wiki, maritim, musik, data, bps, sosial, udara };
