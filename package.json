@@ -1,12 +1,43 @@
 {
   "name": "jangkau",
   "version": "0.2.0",
-  "description": "Beri agent AI kamu akses data publik Indonesia — BMKG, berita, wilayah, kurs, saham IDX — dengan routing multi-backend yang belajar sendiri.",
+  "description": "Beri agent AI kamu akses 18 kanal data publik Indonesia — BMKG gempa & cuaca, berita, sholat, Al-Quran, saham IDX, kualitas udara, pesawat live — dengan routing multi-backend yang belajar sendiri. Zero dependency.",
   "type": "module",
   "bin": { "jangkau": "bin/jangkau.js" },
   "engines": { "node": ">=18" },
-  "scripts": { "test": "bash test.sh" },
-  "keywords": ["indonesia", "agent", "ai", "bmkg", "data-publik", "cli"],
+  "files": [
+    "bin",
+    "src",
+    "SKILL.md",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test-unit.mjs",
+    "test:live": "bash test.sh",
+    "tune": "node bin/jangkau.js tune"
+  },
+  "keywords": [
+    "indonesia",
+    "agent",
+    "ai",
+    "mcp",
+    "bmkg",
+    "data-publik",
+    "cli",
+    "capability-layer",
+    "sholat",
+    "quran"
+  ],
   "author": "Aldo Ryanda",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanda9910/jangkau.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanda9910/jangkau/issues"
+  },
+  "homepage": "https://github.com/ryanda9910/jangkau#readme"
 }
