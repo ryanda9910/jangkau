@@ -24,6 +24,8 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 | Al-Quran | `jangkau quran <surah>` (info surah) / `jangkau quran <surah> <ayat>` (arab+terjemahan) |
 | Tanggal Hijriah | `jangkau hijriah [YYYY-MM-DD]` (konversi dari Masehi) |
 | Pesawat live | `jangkau pesawat [--limit N]` (di wilayah udara Indonesia, OpenSky) |
+| Doa & Asmaul Husna | `jangkau doa` / `jangkau doa --husna` |
+| Wikipedia ID | `jangkau wiki <topik>` (ringkasan Bahasa Indonesia) |
 | Dataset pemerintah | `jangkau data <kata kunci>` |
 | Statistik BPS | `jangkau bps <kata kunci>` (sekali saja: daftar key gratis di webapi.bps.go.id lalu `jangkau bps --key <KEY>`) |
 | Baca 1 post sosial | `jangkau sosial <url>` (oEmbed resmi; TikTok/YouTube tanpa key, IG/FB perlu Meta token) |

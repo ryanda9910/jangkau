@@ -2,6 +2,7 @@
 import { CHANNELS } from "./channels/index.mjs";
 import { doctor } from "./doctor.mjs";
 import { learnReport } from "./learn.mjs";
+import { tune } from "./tune.mjs";
 import { readFileSync, mkdirSync, writeFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -17,6 +18,7 @@ function help() {
     "Perintah lain:",
     "  jangkau doctor                                 cek kesehatan semua kanal (live)",
     "  jangkau learn                                  laporan belajar router (backend andal/gagal)",
+    "  jangkau tune                                   loop self-improving (maker→checker→reflect); flag kanal menurun",
     "  jangkau skill [--install]                      tampilkan / pasang SKILL.md ke .claude/skills",
     "",
     "Output selalu JSON rapi — langsung enak dibaca agent."
@@ -28,6 +30,11 @@ async function main() {
   if (!cmd || cmd === "help" || cmd === "--help") return help();
   if (cmd === "doctor") return console.log(await doctor());
   if (cmd === "learn") return console.log(learnReport());
+  if (cmd === "tune") {
+    const { text, verdict } = await tune();
+    console.log(text);
+    process.exit(verdict);
+  }
   if (cmd === "version" || cmd === "--version") {
     return console.log(JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")).version);
   }

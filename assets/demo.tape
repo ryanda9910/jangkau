@@ -49,4 +49,9 @@ Type "clear"
 Enter
 Type "jangkau learn"
 Enter
+Sleep 4s
+Type "clear"
+Enter
+Type "jangkau tune"
+Enter
 Sleep 5s

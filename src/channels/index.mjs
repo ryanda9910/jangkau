@@ -14,5 +14,7 @@ import * as sholat from "./sholat.mjs";
 import * as quran from "./quran.mjs";
 import * as hijriah from "./hijriah.mjs";
 import * as pesawat from "./pesawat.mjs";
+import * as doa from "./doa.mjs";
+import * as wiki from "./wiki.mjs";
 
-export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, hijriah, pesawat, data, bps, sosial, udara };
+export const CHANNELS = { gempa, cuaca, berita, wilayah, kodepos, kurs, saham, ihsg, sholat, quran, hijriah, pesawat, doa, wiki, data, bps, sosial, udara };

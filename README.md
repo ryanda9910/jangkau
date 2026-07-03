@@ -13,7 +13,7 @@ Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nul
 - 💱 "Kurs dolar sekarang?" / 📈 "BBCA berapa?" → tidak tahu sumber gratis yang legal
 - 📊 "Cari data inflasi resmi" → tidak tahu data.go.id dan BPS WebAPI itu ada
 
-`jangkau` membereskan semuanya: **16 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
+`jangkau` membereskan semuanya: **18 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
 
 ## Instal (suruh agent kamu yang pasang)
 
@@ -36,7 +36,7 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 
 | Kanal | Perintah | Sumber |
 |---|---|---|
-| 🌋 Gempa | `jangkau gempa` / `--m5` / `--dirasakan` / `--tsunami` | BMKG (open JSON) |
+| 🌋 Gempa | `jangkau gempa` / `--m5` / `--dirasakan` / `--tsunami` / `--live` | BMKG TEWS + INATEWS |
 | 💨 Kualitas udara | `jangkau udara jakarta` | Open-Meteo (tanpa key); WAQI stasiun darat opsional |
 | ⛅ Cuaca | `jangkau cuaca jasinga bogor` | BMKG (level desa, kode diresolve otomatis) |
 | 📰 Berita | `jangkau berita [kata kunci]` | RSS resmi Antara + CNN Indonesia + Tempo |
@@ -49,6 +49,8 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 | 📖 Al-Quran | `jangkau quran 1` / `jangkau quran 2 255` | myQuran (surah + ayat arab/terjemahan/audio) |
 | 🌙 Hijriah | `jangkau hijriah` / `jangkau hijriah 2026-08-17` | Konversi Masehi→Hijriah (myQuran) |
 | ✈️ Pesawat | `jangkau pesawat` | Pesawat live di wilayah udara Indonesia (OpenSky) |
+| 🤲 Doa | `jangkau doa` / `jangkau doa --husna` | Doa harian & Asmaul Husna (myQuran) |
+| 📚 Wiki | `jangkau wiki soekarno` | Ringkasan Wikipedia Bahasa Indonesia |
 | 📊 Dataset | `jangkau data inflasi` | Portal Satu Data (data.go.id) |
 | 📉 Statistik | `jangkau bps inflasi` | BPS WebAPI (key gratis, 1 menit daftar) |
 | 📱 Sosial (1 URL) | `jangkau sosial <url>` | oEmbed resmi: TikTok + YouTube (tanpa key), IG + FB (perlu Meta app token) |
@@ -67,6 +69,7 @@ Tiap kanal punya daftar backend berurutan (utama + cadangan). Bedanya dari capab
 - Router mengurutkan backend berdasar tingkat sukses NYATA di mesin/jaringan kamu (`~/.jangkau/memory.json`)
 - 1-dari-10 run tetap mencoba urutan asli (epsilon-explore) — backend yang pulih bisa merebut posisinya lagi
 - `jangkau learn` menunjukkan apa yang sudah dipelajari; `jangkau doctor` menunjukkan kanal mana yang hidup sekarang
+- **`jangkau tune`** = loop self-improving (maker→checker→reflect): cek semua kanal live, grade independen (flag kanal yang dulu andal tapi kini menurun, abaikan gangguan sesaat spt rate-limit), lalu ringkas apa yang dipelajari router. Jalankan berkala (cron) atau manual. Exit non-nol kalau ada regresi — enak buat CI/monitoring.
 
 Contoh nyata: Yahoo Finance memblokir IP datacenter tapi lolos di IP rumahan — router kamu akan belajar mana host yang jalan *di tempat kamu*, bukan di README.
 

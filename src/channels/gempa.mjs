@@ -1,17 +1,35 @@
-// gempa — BMKG earthquake feeds (open JSON, no key).
-import { fetchJson, runChannel } from "../core.mjs";
+// gempa — BMKG earthquake feeds (open, no key).
+//   bmkg-tews : curated JSON (autogempa=1, gempaterkini/dirasakan=15) + Potensi field
+//   inatews   : raw INATEWS live feed (~30 latest events, incl small M<3) as fallback/--live
+import { fetchJson, fetchText, runChannel } from "../core.mjs";
 
 export const meta = {
   name: "gempa",
   description: "Gempa bumi terkini + potensi tsunami (BMKG)",
   tier: 0,
-  backends: ["bmkg-tews"],
-  usage: "jangkau gempa [--m5|--dirasakan|--tsunami]",
+  backends: ["bmkg-tews", "inatews"],
+  usage: "jangkau gempa [--m5|--dirasakan|--tsunami|--live]",
 };
 
 const BASE = "https://data.bmkg.go.id/DataMKG/TEWS";
+const INATEWS = "https://bmkg-content-inatews.storage.googleapis.com/live30event.xml";
+
+// Parse INATEWS live30event.xml (30 latest events) with a tiny regex, zero deps.
+function parseInatews(xml) {
+  return [...xml.matchAll(/<gempa>([\s\S]*?)<\/gempa>/g)].map((m) => {
+    const g = (t) => (m[1].match(new RegExp(`<${t}>([\\s\\S]*?)</${t}>`)) || [, ""])[1].trim();
+    return { waktu: g("waktu"), magnitudo: g("mag"), kedalaman: `${g("dalam")} km`, wilayah: g("area"), koordinat: `${g("lintang")},${g("bujur")}`, potensi: "", tsunami: false, dirasakan: "" };
+  });
+}
 
 export async function run(args) {
+  // --live: raw INATEWS feed = ~30 latest events incl small quakes (richer than TEWS).
+  if (args.includes("--live")) {
+    const { result } = await runChannel("gempa", {
+      inatews: async () => parseInatews(await fetchText(INATEWS)),
+    });
+    return result;
+  }
   // --tsunami: BMKG has no separate tsunami feed; the signal lives in the
   // `Potensi` field of the M5+ list ("Berpotensi/Tidak berpotensi tsunami").
   const tsunami = args.includes("--tsunami");
@@ -21,6 +39,8 @@ export async function run(args) {
       const d = await fetchJson(`${BASE}/${mode}.json`);
       return d.Infogempa;
     },
+    // fallback if TEWS JSON is down: serve INATEWS raw so the channel still answers
+    inatews: async () => ({ gempa: parseInatews(await fetchText(INATEWS)).map((g) => ({ Tanggal: g.waktu, Jam: "", Magnitude: g.magnitudo, Kedalaman: g.kedalaman, Wilayah: g.wilayah, Potensi: "", Coordinates: g.koordinat })) }),
   });
   // "Berpotensi tsunami" = alert; "Tidak berpotensi tsunami" = safe. Match the
   // former only (the word tsunami without a preceding "tidak").
