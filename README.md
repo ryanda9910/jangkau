@@ -77,9 +77,12 @@ Contoh nyata: Yahoo Finance memblokir IP datacenter tapi lolos di IP rumahan —
 
 ## Roadmap
 
-- `peraturan` (JDIH) + `putusan` (Mahkamah Agung) — endpoint publiknya di balik WAF anti-bot; butuh riset per-sumber yang sopan sebelum layak rilis
-- `bmkg iklim` (indeks UV, kualitas udara), `tsunami` warning feed
-- Kanal usulan? Buka issue — kriteria: sumber resmi, legal, tanpa login.
+- `bmkg iklim` (indeks UV), pasang surut, siklon tropis — kalau ada endpoint publik JSON.
+- Kanal usulan? Buka issue — kriteria: sumber resmi, legal, tanpa login, tanpa bypass WAF.
+
+### Kenapa belum ada `peraturan` / `putusan`
+
+Diprobe (2026-07): JDIH BPK (`peraturan.bpk.go.id`), JDIHN (`jdihn.go.id`), dan Direktori Putusan Mahkamah Agung (`putusan3.mahkamahagung.go.id`) semuanya menaruh endpoint **search di balik WAF anti-bot** — request programatik dapat `403`/timeout meski halaman depan bisa dibuka. Menembusnya butuh headless browser yang menyelesaikan challenge WAF, alias **circumvention**, yang di luar prinsip jangkau (sama dengan aturan "tanpa login-scraping"). Kalau BPK/JDIHN/MA merilis API resmi (mis. via Satu Data), kanal ini langsung dibangun. Sementara, sebagian peraturan bisa dicari lewat `jangkau data` (Portal Satu Data) bila instansinya mempublikasikan datasetnya di sana.
 
 ## Lisensi
 
