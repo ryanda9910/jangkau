@@ -13,7 +13,7 @@ Agent AI (Claude Code, Cursor, OpenClaw, apa pun yang bisa jalanin CLI) jago nul
 - 💱 "Kurs dolar sekarang?" / 📈 "BBCA berapa?" → tidak tahu sumber gratis yang legal
 - 📊 "Cari data inflasi resmi" → tidak tahu data.go.id dan BPS WebAPI itu ada
 
-`jangkau` membereskan semuanya: **9 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
+`jangkau` membereskan semuanya: **10 kanal data publik Indonesia** — sumber resmi (BMKG, RSS media, ECB, Portal Satu Data, BPS) atau open-data komunitas (kodewilayah, emsifa, sooluh) dan endpoint publik Yahoo Finance — semuanya legal, plain GET, output selalu JSON rapi yang enak dibaca agent. Tanpa scraping login, tanpa risiko ban akun, tanpa API berbayar.
 
 ## Instal (suruh agent kamu yang pasang)
 
@@ -45,6 +45,13 @@ Butuh Node.js ≥ 18. Zero dependency — tidak ada `node_modules`.
 | 📈 Saham IDX | `jangkau saham BBCA` | Yahoo Finance (data, bukan rekomendasi) |
 | 📊 Dataset | `jangkau data inflasi` | Portal Satu Data (data.go.id) |
 | 📉 Statistik | `jangkau bps inflasi` | BPS WebAPI (key gratis, 1 menit daftar) |
+| 📱 Sosial (1 URL) | `jangkau sosial <url>` | oEmbed resmi: TikTok + YouTube (tanpa key), IG + FB (perlu Meta app token) |
+
+### Soal media sosial
+
+`jangkau sosial` **hanya** membaca **satu** post publik yang kamu sudah punya URL-nya, lewat endpoint **oEmbed resmi** tiap platform. Tidak ada login, tidak ada cookie, tidak ada scraping feed, tidak ada risiko ban.
+
+Yang **tidak** dilakukan (dan tidak akan pernah): scan/search timeline, baca DM, follower, atau apa pun yang butuh cookie login akun. Itu melanggar ToS dan bisa nge-ban akunmu — di luar prinsip jangkau. TikTok & YouTube jalan langsung; IG & Facebook butuh Meta app token (`jangkau sosial --meta <APP_ID> <APP_SECRET>`, atau env `META_APP_ID`/`META_APP_SECRET`).
 
 ## Yang membedakan: router yang belajar sendiri
 

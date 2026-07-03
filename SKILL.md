@@ -20,6 +20,7 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 | Saham IDX | `jangkau saham BBCA` (data, bukan rekomendasi) |
 | Dataset pemerintah | `jangkau data <kata kunci>` |
 | Statistik BPS | `jangkau bps <kata kunci>` (sekali saja: daftar key gratis di webapi.bps.go.id lalu `jangkau bps --key <KEY>`) |
+| Baca 1 post sosial | `jangkau sosial <url>` (oEmbed resmi; TikTok/YouTube tanpa key, IG/FB perlu Meta token) |
 
 ## Diagnosa & belajar
 
@@ -32,3 +33,4 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 2. Data saham/kurs = DATA MENTAH, bukan rekomendasi investasi — jangan menyusun saran beli/jual darinya.
 3. `jangkau bps` butuh key gratis; kalau belum ada, minta user daftar di webapi.bps.go.id (1 menit), jangan cari jalan pintas.
 4. Semua output JSON — parse langsung, jangan regex teks bebasnya.
+5. `jangkau sosial` hanya baca 1 URL post publik via oEmbed resmi — JANGAN pernah minta/pakai cookie login untuk scan feed/DM/follower. Kalau user minta itu, tolak: langgar ToS + risiko ban akun.

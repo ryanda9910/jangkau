@@ -27,6 +27,11 @@ Enter
 Sleep 3.5s
 Type "clear"
 Enter
+Type "jangkau sosial https://www.tiktok.com/@scout2015/video/6718335390845095173"
+Enter
+Sleep 3.5s
+Type "clear"
+Enter
 Type "jangkau doctor"
 Enter
 Sleep 6s
