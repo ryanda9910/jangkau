@@ -30,7 +30,7 @@ jobs:
           node --input-type=module -e "
             import { CHANNELS } from './src/channels/index.mjs';
             const names = Object.keys(CHANNELS);
-            if (names.length < 20) { console.error('expected >=20 channels, got', names.length); process.exit(1); }
+            if (names.length < 21) { console.error('expected >=21 channels, got', names.length); process.exit(1); }
             for (const [k, ch] of Object.entries(CHANNELS)) {
               for (const f of ['run','check']) if (typeof ch[f] !== 'function') { console.error(k,'missing',f); process.exit(1); }
               if (!ch.meta?.name || !ch.meta?.usage) { console.error(k,'bad meta'); process.exit(1); }

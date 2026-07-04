@@ -1,6 +1,6 @@
 {
   "name": "jangkau",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Beri agent AI kamu akses 18 kanal data publik Indonesia — BMKG gempa & cuaca, berita, sholat, Al-Quran, saham IDX, kualitas udara, pesawat live — dengan routing multi-backend yang belajar sendiri. Zero dependency.",
   "type": "module",
   "bin": { "jangkau": "bin/jangkau.js" },

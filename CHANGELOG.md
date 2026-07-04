@@ -45,3 +45,8 @@ Rilis awal: 9 kanal + self-learning backend router.
 - **Self-learning router**: tiap panggilan backend dicatat dengan hasilnya (`~/.jangkau/learn.jsonl`), urutan backend mengikuti tingkat sukses nyata di mesin pengguna (`~/.jangkau/memory.json`, epsilon 0.1).
 - `doctor` (health check live), `learn` (laporan router), `skill --install`.
 - Zero dependency, Node ≥18, MIT.
+
+## [0.2.3] - 2026-07-04
+
+### Ditambahkan
+- **`bbm`**: harga BBM Pertamina (Pertalite/Biosolar subsidi + Pertamax/Turbo/Dex non-subsidi), dari dataset terverifikasi bbm-predictor (berita penyesuaian resmi), bukan scraping situs SPBU. Shell/BP/Vivo sengaja tidak disertakan: tidak ada sumber data publik legal (hanya via scraping = di luar prinsip).

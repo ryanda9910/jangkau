@@ -28,6 +28,7 @@ Semua perintah mengembalikan JSON rapi. Semua sumber = API/feed publik legal (re
 | Wikipedia ID | `jangkau wiki <topik>` (ringkasan Bahasa Indonesia) |
 | Kondisi laut | `jangkau maritim <perairan>` (gelombang/arah/periode/suhu laut; contoh: selat sunda, natuna, bali) |
 | Top musik ID | `jangkau musik [lagu\|album\|podcast]` (chart Apple Music Indonesia) |
+| Harga BBM | `jangkau bbm` (Pertamina subsidi + non-subsidi, data terverifikasi; Shell/BP/Vivo tak tersedia = tak ada sumber legal) |
 | Dataset pemerintah | `jangkau data <kata kunci>` |
 | Statistik BPS | `jangkau bps <kata kunci>` (sekali saja: daftar key gratis di webapi.bps.go.id lalu `jangkau bps --key <KEY>`) |
 | Baca 1 post sosial | `jangkau sosial <url>` (oEmbed resmi; TikTok/YouTube tanpa key, IG/FB perlu Meta token) |

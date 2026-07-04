@@ -34,6 +34,7 @@ check "doa"      '"arab"'        $J doa
 check "wiki"     '"ringkasan"'   $J wiki soekarno
 check "maritim"  '"tinggi_gelombang"' $J maritim "selat sunda"
 check "musik"    '"peringkat"'   $J musik --limit 3
+check "bbm"      '"pertamina"'   $J bbm
 check "gempa-live" '"magnitudo"' $J gempa --live
 check "cuaca"    '"lokasi"'     $J cuaca jasinga bogor
 check "bps"      'webapi.bps.go.id\|"indikator"' $J bps inflasi
